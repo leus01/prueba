@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "5f8af427-c4c7-4a04-bb2d-ced8f2892273",
+		"name": "API Salud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4117618"
+	},
+	"item": [
+		{
+			"name": "Nuevo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipo\": \"H\",\r\n  \"calificacionInfraestructura\": 70,\r\n  \"calificacionServicios\": 80,\r\n  \"ambulancias\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/centroSalud",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"centroSalud"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Simple",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/centroSalud",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"centroSalud"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Completa Evaluacion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/centroSaludResultado",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"centroSaludResultado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Resultado x Codigo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipo\": \"H\",\r\n  \"calificacionInfraestructura\": 80,\r\n  \"calificacionServicios\": 88,\r\n  \"ambulancias\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/centroSalud/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"centroSalud",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar por Código",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipo\": \"C\",\r\n  \"calificacionInfraestructura\": 99,\r\n  \"calificacionServicios\": 99,\r\n  \"ambulancias\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/centroSalud/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"centroSalud",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista x Tipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/centroSaludTipo/H",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"centroSaludTipo",
+						"H"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
